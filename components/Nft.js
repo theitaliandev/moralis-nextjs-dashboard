@@ -1,4 +1,4 @@
-import { Box, Center, Image, Text } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useNFTBalances } from "react-moralis";
 import CustomContainer from "./CustomContainer";
