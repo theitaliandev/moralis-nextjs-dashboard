@@ -1,7 +1,7 @@
 import { FormControl, FormLabel, NumberDecrementStepper, NumberIncrementStepper, NumberInput, NumberInputField, NumberInputStepper, Text, Input, Button, useToast } from "@chakra-ui/react";
 import Moralis from "moralis";
 import { useWeb3Transfer } from "react-moralis";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import CustomContainer from "./CustomContainer";
 
 export default function Send() {
@@ -11,14 +11,14 @@ export default function Send() {
 
     const toast = useToast()
 
-    const { fetch, error, isFetching } = useWeb3Transfer({
+    const { fetch, isFetching } = useWeb3Transfer({
         amount: Moralis.Units.ETH(amount),
         receiver: receiver,
         type: "native",
     });
 
     const handleChange = (value) => setAmount(value)
-    
+
     return (
         <CustomContainer>
             <Text fontSize="xl" fontWeight="bold">Send ETH</Text>
