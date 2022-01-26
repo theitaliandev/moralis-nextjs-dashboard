@@ -1,12 +1,12 @@
 import { Box, Image, Text } from "@chakra-ui/react";
-import { useEffect } from "react";
 import { useNFTBalances } from "react-moralis";
 import CustomContainer from "./CustomContainer";
+import React from "react";
 
 export default function Nft({ user }) {
     const { getNFTBalances, data } = useNFTBalances();
 
-    useEffect(() => {
+    React.useEffect(() => {
         getNFTBalances({
             params: {
                 chain: "rinkeby",

@@ -1,13 +1,12 @@
 import {  Text,  Link, Divider, Button } from '@chakra-ui/react'
-import { useEffect } from "react";
 import { useMoralisWeb3Api } from "react-moralis";
-import { useState } from "react/cjs/react.development";
 import CustomContainer from "./CustomContainer";
+import React from 'react';
 
 export default function Transactions({user}) {
     
   const Web3Api = useMoralisWeb3Api()
-  const [transactions, setTransactions] = useState()
+  const [transactions, setTransactions] = React.useState()
   const BASE_URL = "https://rinkeby.etherscan.io/tx/"
 
   const fetchTransactions = async () => {
@@ -21,7 +20,7 @@ export default function Transactions({user}) {
         }
       }
 
-      useEffect(() => {
+      React.useEffect(() => {
         fetchTransactions()
       }, [])
 

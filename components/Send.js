@@ -1,13 +1,13 @@
 import { FormControl, FormLabel, NumberDecrementStepper, NumberIncrementStepper, NumberInput, NumberInputField, NumberInputStepper, Text, Input, Button, useToast } from "@chakra-ui/react";
 import Moralis from "moralis";
 import { useWeb3Transfer } from "react-moralis";
-import { useState } from "react";
 import CustomContainer from "./CustomContainer";
+import React from "react";
 
 export default function Send() {
 
-    const [amount, setAmount] = useState(0)
-    const [receiver, setReceiver] = useState('')
+    const [amount, setAmount] = React.useState(0)
+    const [receiver, setReceiver] = React.useState('')
 
     const toast = useToast()
 

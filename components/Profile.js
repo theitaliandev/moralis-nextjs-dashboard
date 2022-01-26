@@ -1,10 +1,10 @@
 import {  Button, FormControl, FormLabel, Input, Text, useToast } from "@chakra-ui/react";
-import { useState } from "react";
 import { useMoralis } from "react-moralis";
 import CustomContainer from "./CustomContainer";
+import React from "react";
 
 export default function Profile({user}) {
-    const [input, setInput] = useState('')
+    const [input, setInput] = React.useState('')
     const { setUserData, isUserUpdating } = useMoralis();
     return (
             <CustomContainer>
