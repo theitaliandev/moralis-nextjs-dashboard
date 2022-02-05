@@ -1,4 +1,4 @@
-import { Flex, Text, Button, Tabs, TabList, Tab, TabPanels, TabPanel, Box } from "@chakra-ui/react";
+import { Flex, Text, Button, Tabs, TabList, Tab, TabPanels, TabPanel, Box, Link } from "@chakra-ui/react";
 import Head from "next/head";
 import { useMoralis } from "react-moralis";
 import Balance from "../components/Balance";
@@ -18,6 +18,7 @@ export default function Home() {
         </Head>
         <Flex direction="column" justifyContent="center" alignItems="center" width="100vw" height="100vh" bgGradient="linear(to-br, teal.400, purple.300)">
           <Text fontSize="5xl" fontWeight="bold" color="white">Dashboard3</Text>
+          <Link fontSize="2xl" fontWeight="bold" color="black" href="https://youtu.be/nfYCSodsdn8" target="_blank">Watch the complete tutorial on YouTue</Link>
           <Button colorScheme="purple" size="lg" mt="6" onClick={() => authenticate({
             signingMessage: "Sign required to login in Dashboard3"
           })} disabled={isAuthenticating}>Login with Metamask</Button>
