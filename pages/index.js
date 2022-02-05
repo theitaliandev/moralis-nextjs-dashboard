@@ -34,6 +34,7 @@ export default function Home() {
     <Flex direction="column" width="100vw" height="100vh">
       <Header isAuthenticated={isAuthenticated} isAuthenticating={isAuthenticating} user={user} authenticate={authenticate} logout={logout} isLoggingOut={isLoggingOut} />
       <Box flex="1" bg="purple.100" px="52" py="20">
+      <Link fontSize="3xl" fontWeight="bold" color="black" href="https://youtu.be/nfYCSodsdn8" target="_blank">Watch the full tutorial on YouTue</Link>
         <Tabs size="lg" colorScheme="purple" align="center" variant="enclosed">
           <TabList>
             <Tab fontWeight="bold">Profile</Tab>
