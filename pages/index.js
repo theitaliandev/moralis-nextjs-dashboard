@@ -18,7 +18,7 @@ export default function Home() {
         </Head>
         <Flex direction="column" justifyContent="center" alignItems="center" width="100vw" height="100vh" bgGradient="linear(to-br, teal.400, purple.300)">
           <Text fontSize="5xl" fontWeight="bold" color="white">Dashboard3</Text>
-          <Link fontSize="2xl" fontWeight="bold" color="black" href="https://youtu.be/nfYCSodsdn8" target="_blank">Watch the complete tutorial on YouTue</Link>
+          <Link fontSize="2xl" fontWeight="bold" color="black" href="https://youtu.be/nfYCSodsdn8" target="_blank">Watch the full tutorial on YouTue</Link>
           <Button colorScheme="purple" size="lg" mt="6" onClick={() => authenticate({
             signingMessage: "Sign required to login in Dashboard3"
           })} disabled={isAuthenticating}>Login with Metamask</Button>
