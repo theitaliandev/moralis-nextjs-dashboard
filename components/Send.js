@@ -12,7 +12,7 @@ export default function Send() {
     const toast = useToast()
 
     const { fetch, isFetching } = useWeb3Transfer({
-        amount: Moralis.Units.ETH(amount),
+        amount: Moralis.Units.ETH(amount === '' ? 0 : amount),
         receiver: receiver,
         type: "native",
     });
