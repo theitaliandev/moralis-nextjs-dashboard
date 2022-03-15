@@ -7,6 +7,7 @@ import Nft from "../components/Nft";
 import Profile from "../components/Profile";
 import Send from "../components/Send";
 import Transactions from "../components/Transactions";
+import NftPrivateTab from '../components/NftPrivateTab'
 
 export default function Home() {
   const {isAuthenticated, user, isAuthenticating, authenticate, logout, isLoggingOut} = useMoralis()
@@ -42,6 +43,7 @@ export default function Home() {
             <Tab fontWeight="bold">Transactions</Tab>
             <Tab fontWeight="bold">NFTs</Tab>
             <Tab fontWeight="bold">Send ETH</Tab>
+            <Tab fontWeight="bold">Private</Tab> 
           </TabList>
           <TabPanels>
             <TabPanel>
@@ -58,6 +60,9 @@ export default function Home() {
             </TabPanel>
             <TabPanel>
               <Send/>
+            </TabPanel>
+            <TabPanel>
+                <NftPrivateTab user={user} />
             </TabPanel>
           </TabPanels>
         </Tabs>

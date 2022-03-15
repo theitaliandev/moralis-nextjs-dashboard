@@ -14,6 +14,7 @@ export default function Nft({ user }) {
             }
         })
     }, [])
+    console.log(data)  
     return (
         <CustomContainer>
             <Text fontSize="xl" fontWeight="bold">Your NFTs</Text>
